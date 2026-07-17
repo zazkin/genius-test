@@ -1,0 +1,45 @@
+ul{
+    list-style-type: none;
+}
+
+.button {
+width: 238;
+height: 59;
+border-radius: 8px;
+border-width: 2px;
+padding-top: 16px;
+padding-right: 32px;
+padding-bottom: 16px;
+padding-left: 32px;
+gap: 10px;
+opacity: 1;
+background-color: rgba(129, 155, 87, 1);
+border: 2px solid rgba(129, 155, 87, 1);
+color: rgba(250, 244, 234, 1);
+cursor: pointer;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: rgba(129, 155, 87, 1);
+}
+
+.link {
+    color: rgba(250, 244, 234, 1);
+}
+.link:hover {
+    color: rgba(129, 155, 87, 1);
+}
+
+.hero-title {
+    color: rgba(250, 244, 234, 1);
+}
+
+.hero-title:hover {
+    color: rgba(129, 155, 87, 1);
+}
+
+.advantages-list{
+    background-color: rgba(129, 155, 87, 1);
+    color: rgba(250, 244, 234, 1) ;
+}
