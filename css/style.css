@@ -288,8 +288,24 @@ cursor: pointer;
 
 /* Chef section */
 
+.chef-cards{
+    display: flex;
+    gap: 40px;
+
+}
+
+.chef-cards li {
+flex-basis: calc((100% - 40px) / 2);
+
+}
+
+.chef-card{
+    display: flex;
+    gap: 30px;
+}
+
 .chefs-title{
-    max-width: 352px;
+    position: relative;
     margin: 0 auto 80px;
 }
 .chef-title{
@@ -306,16 +322,28 @@ cursor: pointer;
         border-bottom-left-radius: 200px;
         box-shadow: -16px 16px 0 0 var(--color-primary-light),
          -16px 16px 0 2px var(--color-secondary-dark);
+         flex-shrink: 0;
     }       
-.chefs-title::after,
-.chefs-title::before{
-    display: block;
+.chefs-title::before,
+.chefs-title::after{
+    position: absolute;
+    bottom: 24px;
     width: 352px;
-    border: 2px solid black;
+    border: 2px solid var(--color-brand-light);
     content: "";
 }
 
+.chefs-title::before{
+    left: 0;
+}
+
+.chefs-title::after {
+    right: 0;
+}
+
 /* format section */
+
+
 .format-title{
     margin-bottom: 80px;
 }
@@ -343,6 +371,10 @@ cursor: pointer;
 .format-list{
     display: flex;
     gap: 20px;
+}
+
+.format-list li{
+    flex-basis: calc((100% - (20px * 2)) / 3);
 }
 
 /* carousel-button */
@@ -375,6 +407,30 @@ cursor: pointer;
 
 /* footer-section */
 
+.footer-socials{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.footer-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .adress-link {
     color: var(--color-primary-light);
     font-size: 16px;
@@ -397,11 +453,38 @@ cursor: pointer;
 .adress-copyright{
     font-size: 14px;
     font-weight: 400;
+    color: var(--color-primary-light);
 }
 .footer{
+    position: relative;
     background-image: url('../images/footer-background.png');
     background-color: var(--color-primary-dark);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 32px 0;
 } 
+
+.footer::before{
+    position: absolute;
+    background-image: url(../Images/decor-bread-small.png);
+    content: '';
+    width: 180px;
+    height: 120px;
+    left: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+
+}
+
+.footer::after {
+    position: absolute;
+    background-image: url(../Images/decor-bread-large.png);
+    content: '';
+    width: 380px;
+    height: 190px;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+
+}
