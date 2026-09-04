@@ -511,9 +511,7 @@ flex-basis: calc((100% - 40px) / 2);
 }
 
 .backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    display: none;
 }
 
 .modal-btn-close {
