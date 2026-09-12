@@ -164,6 +164,7 @@ cursor: pointer;
 .link {
     color: var(--color-primary-light);
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 .link:hover {
     color: var(--color-brand-light); 
@@ -171,7 +172,12 @@ cursor: pointer;
 
 /* Header Styles */
 .header{
-    background-color: gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding-top: 32px;
 }
 
 .header-container {
@@ -196,7 +202,8 @@ cursor: pointer;
 
 .hero-section {
     padding: 272px 0;
-    background-image: url('../images/hero-section-background.jpg');
+    background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%),
+    url('../images/hero-section-background.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -367,7 +374,12 @@ flex-basis: calc((100% - 40px) / 2);
     border: 1px solid var(--color-brand-dark);  /* remove */
     border-radius: 16px;
     padding: 24px;
+    transition: transform 0.3s ease;
 }
+.format-card:hover{
+    transform: scale(1.05);
+}
+
 .format-list{
     display: flex;
     gap: 20px;
@@ -383,6 +395,7 @@ flex-basis: calc((100% - 40px) / 2);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 44px;
     height: 44px;
     padding: 0;
@@ -398,6 +411,10 @@ flex-basis: calc((100% - 40px) / 2);
     background-color: var(--color-primary-dark);
     fill: var(--color-primary-light);
     }
+
+.carusel-button.next {
+    rotate: 180deg;
+}
 
 /* contact-section */
 
@@ -500,12 +517,17 @@ flex-basis: calc((100% - 40px) / 2);
     display: flex;
     justify-content: center;
     align-items: center; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 } 
+
 
 .modal {
     position: relative;
-    width: 880px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
+    max-width: 880px;
+    max-height: 600px;
+    padding: 20px 0;
     background-color: var(--color-primary-light);
     border-radius: 32px;
 }
