@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding-top: 32px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    gap: 64px;
+  }
+
+  &__menu-link {
+    color: $color-primary-light;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-brand;
+    }
+  }
+}

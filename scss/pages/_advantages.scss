@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.advantages-section {
+  padding: 16px 0;
+  background-color: $color-brand;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__item {
+    color: $color-primary-light;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}

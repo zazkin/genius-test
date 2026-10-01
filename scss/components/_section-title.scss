@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.section-title {
+  color: $color-primary-dark;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.3;
+
+  &--centered {
+    text-align: center;
+  }
+
+  &__accent {
+    color: $color-brand-dark;
+  }
+}

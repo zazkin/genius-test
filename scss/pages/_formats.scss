@@ -1,0 +1,16 @@
+.formats-carousel {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.formats-list {
+  display: flex;
+  flex-grow: 1;
+  gap: 20px;
+
+  &__item {
+    flex-basis: calc((100% - 40px) / 3);
+    min-width: 0;
+  }
+}
